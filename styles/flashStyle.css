@@ -1,0 +1,141 @@
+
+.flashPanel {
+    font-size: 40px;
+
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    
+    transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, font-size 0.5s;
+}
+
+.firstFlash {
+    width: 20%;
+    height: 20%;
+
+    top: 50%;
+    left: 15%;
+
+    font-size: 15px;
+    z-index: 2;
+}
+
+.secondFlash {
+    width: 45%;
+    height: 45%;
+
+    top: 50%;
+    left: 50%;
+
+    font-size: 40px;
+    z-index: 3;
+}
+
+.thirdFlash {
+    width: 20%;
+    height: 20%;
+
+    top: 50%;
+    left: 85%;
+
+    font-size: 15px;
+    z-index: 2;
+}
+
+.fourthFlash {
+    width: 1%;
+    height: 1%;
+
+    top: 50%;
+    left: 50%;
+
+    font-size: 1px;
+    z-index: 1;
+}
+
+#flashCard {
+    width: 100%;
+    height: 100%;
+    background-color: #C4E9EC;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    /* transform: translate(-50%, -50%); */
+    transition: transform 0.5s, background-color 0.5s;
+
+    border-radius: 25px;
+}
+
+#flashCardFront, #flashCardBack {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    transform: translate(-50%, -50%);
+    /* transition: color 0.1s; */
+}
+
+#flashCardFront img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: width 0.25s, height 0.25s;
+}
+
+#flashCardFront.imageHolder {
+   width: 80%;
+   height: 80%;
+}
+
+#flashCardFront.flipped img {
+    width: 0px;
+    height: 0px;
+}
+
+
+#flashCardFront.flipped {
+    color: transparent;
+    /* transform: translate(-50%, -50%) rotateX(180deg); */
+    /* transform: translate(-50%, -50%); */
+}
+
+#flashCardBack {
+    color: transparent;
+    /* transform: translate(-50%, -50%) rotateX(180deg); */
+    /* transform: translate(-50%, -50%); */
+}
+
+#flashCardBack.flipped {
+    color: black;
+    /* transform: translate(-50%, -50%); */
+}
+
+
+#flashCard.flipped {
+    transform: rotateX(180deg);
+    /* transform: translate(-50%, -50%); */
+}
+
+
+
+
+.firstFlash #flashCard, .thirdFlash #flashCard {
+    background-color: #7BB3B7;
+}
+
+.fourthFlash #flashCard {
+    background-color: transparent;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Study</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./res/icon.svg">
+    <link rel="stylesheet" href="./styles/flashStyle.css">
+    <link rel="stylesheet" href="./styles/deckStyle.css">
+    <link rel="stylesheet" href="./styles/typeStyle.css">
+    <link rel="stylesheet" href="./styles/cookieStyle.css">
+    <link rel="stylesheet" href="./styles/deckAdderStyle.css">
+    <link rel="stylesheet" href="./styles/infoStyle.css">
+    <link rel="stylesheet" href="./styles/testStyle.css">
+    <link rel="stylesheet" href="./styles/homeStyle.css">
+</head>
+
+<body>
+
+    <div id="nav">
+        <!-- <div class="navB" id="HomeNav">Home</div>
+        <div class="navB" id="DecksNav">Decks</div>
+        <div class="navB" id="FlashNav">Flash</div>
+        <div class="navB" id="TypeNav">Type</div> -->
+
+        <div class="navB" id="HomeNav"><img src="./res/home.png" alt="Home" class="navIcon"></div>
+        <div class="navB" id="DecksNav"><img src="./res/edit.png" alt="Decks" class="navIcon"></div>
+        <div class="navB" id="FlashNav"><img src="./res/decks.png" alt="Flash" class="navIcon"></div>
+        <div class="navB" id="TypeNav"><img src="./res/terminal.png" alt="Type" class="navIcon"></div>
+        <div class="navB" id="TestNav"><img src="./res/test.png" alt="Test" class="navIcon"></div>
+        <div class="navB" id="InfoNav"><img src="./res/info.png" alt="Info" class="navIcon"></div>
+
+
+    </div>
+
+    <div id="activ">
+        <div class="subPage active" id="HomePage">
+
+            <embed src="./decks/Probook.pdf" id="probookPDF">
+        </div>
+
+        <div class="subPage" id="DecksPage">
+            <h1>Decks</h1>
+            <div id="deckList">
+                <div id="deckListHead">
+                    <div class="deckListTitle">
+                        <p>Title</p>
+                    </div>
+                    <div class="deckListSize">
+                        <p>Size</p>
+                    </div>
+                    <div class="deckListSelection">
+                        <p>Selection</p>
+                    </div>
+                </div>
+
+                <div id="deckListBody">
+
+                </div>
+
+
+            </div>
+
+            <div id="toggleDeckAdder">
+                <p id="toggleDeckAdderText">+</p>
+            </div>
+            <div id="clearAllDecks"><img src="./res/trash.png" alt="Clear" id="clearDeckIcon"></div>
+
+            <div id="deckAdder" class="">
+                <!-- <h1 id="deckAdderTitle">New Deck</h1> -->
+
+                <div id="deckForm">
+                    <input type="text" name="deckAdderTitleInput" id="deckAdderTitleInput" placeholder="Untitled Deck">
+
+                    <label for="deckAdderWordSeparator">Word Separator: </label>
+                    <label for="deckAdderLineSeparator">Line Separator: </label>
+
+                    <input type="text" name="deckAdderWordSeparator" id="deckAdderWordSeparator" placeholder=":">
+                    <input type="text" name="deckAdderLineSeparator" id="deckAdderLineSeparator" placeholder="\n">
+
+                    <textarea name="deckAdderCardInput" id="deckAdderCardInput"
+                        placeholder="Word : Definition"></textarea>
+
+                    <button id="deckAdderCancel">Cancel</button>
+                    <button id="deckAdderSubmit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="subPage" id="flashPage">
+            <h1 id="flashTitle">Flash Cards</h1>
+            <div class="flashPanel" id="flashFour">
+                <div id="flashCard"></div>
+                <p id="flashCardFront">Test Four</p>
+                <p id="flashCardBack">Answer Four</p>
+            </div>
+
+            <div class="flashPanel" id="flashOne">
+                <div id="flashCard"></div>
+                <p id="flashCardFront">Test One</p>
+                <p id="flashCardBack">Answer One</p>
+            </div>
+            <div class="flashPanel" id="flashThree">
+                <div id="flashCard"></div>
+                <p id="flashCardFront">Test Three</p>
+                <p id="flashCardBack">Answer Three</p>
+            </div>
+
+            <div class="flashPanel" id="flashTwo">
+                <div id="flashCard"></div>
+                <p id="flashCardFront">Test Two</p>
+                <p id="flashCardBack">Answer Two</p>
+            </div>
+        </div>
+
+        <div class="subPage" id="typePage">
+            <div id="webterm">
+                <div id="webtermLog">
+                    <!-- <div class="webtermEntry">
+                        Testing testing testing
+                    </div> -->
+                </div>
+
+                <div id="webtermInpBox">
+                    <input type="text" name="webtermInp" id="webtermInp"
+                        placeholder="Type [help] for additional commands">
+                </div>
+            </div>
+        </div>
+
+        <div class="subPage" id="testPage">
+            <div id="testBox">
+                <div id="takeTestModal" class="">
+                    <p id="takeTestLabel">Take a test to prove your skills!</p>
+                    <button id="takeTestButton">Start</button>
+                </div>
+
+                <div id="testDocument" class="hidden">
+
+                </div>
+
+                <div id="testResults" class="hidden">
+                    <h1 id="testResultsTitle">Results</h1>
+                    <div id="testResultBar"></div>
+                    <div id="testResultBarIndicator"></div>
+                    <div id="missedDiv">
+                        <h1 id="testResultsMissedTitle">Missed Questions</h1>
+                        <div id="testResultsMissedQuestions">
+
+                        </div>
+                    </div>
+                    <div id="retakeTestButton">Reset</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="subPage" id="infoPage">
+
+            <div id="licenseContract">
+                <div id="licenseHeader">
+                    <h1>License (MIT)</h1>
+                </div>
+                <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+                    associated documentation files (the "Software"), to deal in the Software without restriction,
+                    including
+                    without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+                    sell
+                    copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
+                    the
+                    following conditions:
+                    <br>
+                    <br>
+                    The above copyright notice and this permission notice shall be included in all copies or substantial
+                    portions of the Software.
+                    <br>
+                    <br>
+                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+                    NOT
+                    LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+                    IN
+                    NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+                    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <dialog id="cookieModal">
+        <p id="cookieCheckText">This site may use cookies or other local browser storage to store learning related data.
+            By continuing to use this site, you agree to any use of these for all purposes on this site.</p>
+        <button id="closeCookieModal">Accept</button>
+    </dialog>
+
+    <script src="./script/firstInitialize.js"></script>
+    <script src="./decks/decksJSON.js"></script>
+
+    <script src="./script/tabManager.js"></script>
+    <script src="./script/deckManager.js"></script>
+    <script src="./script/flashPage.js"></script>
+    <script src="./script/deckPage.js"></script>
+    <script src="./script/typePage.js"></script>
+    <script src="./script/testPage.js"></script>
+    <script src="./script/cookieCheck.js"></script>
+    <script src="./script/deckAdder.js"></script>
+
+    <script src="./script/finalInitialize.js"></script>
+
+</body>
+
+</html>

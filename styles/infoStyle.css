@@ -1,0 +1,41 @@
+#infoPage {
+
+}
+
+#licenseContract {
+    width: calc(60% - 100px);
+    position: absolute;
+    height: fit-content;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    padding-top: 100px;
+
+}
+
+#licenseHeader {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    
+    background-color: black;
+    color: whitesmoke;
+
+    
+
+    width: 100%;
+    height: fit-content;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+

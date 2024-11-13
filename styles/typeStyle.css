@@ -1,0 +1,121 @@
+/* The terminal parent div */
+#webterm {
+    background: rgb(34, 58, 79);
+    background: radial-gradient(circle, rgba(34, 58, 79, 0.8) 0%, rgba(39, 36, 96, 0.8) 84%);
+
+    width: 80%;
+    height: 70%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* The terminal log div */
+#webtermLog {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 100%;
+    height: calc(100% - 74px);
+
+    padding-top: 20px;
+
+    border-bottom: 1px whitesmoke solid;
+
+    overflow-y: auto;
+
+    color: whitesmoke;
+    font-size: 12px;
+
+    font-family: monospace;
+}
+
+/* width */
+#webtermLog::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#webtermLog::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#webtermLog::-webkit-scrollbar-thumb {
+    background: #888;
+
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+#webtermLog::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* The webterm input parent div */
+#webtermInpBox {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    width: 100%;
+    height: 50px;
+}
+
+/* The webterm input element */
+#webtermInp {
+    width: calc(100% - 20px);
+    height: 100%;
+
+    background-color: transparent;
+
+    padding: 0px;
+    margin: 0px;
+
+    border: 0px;
+
+    color: whitesmoke;
+    font-size: 20px;
+
+    font-family: monospace;
+
+    padding-left: 20px;
+}
+
+#webtermInp:focus {
+    outline-width: 0px;
+}
+
+.webtermEntry {
+    width: calc(100% - 25px);
+    background-color: transparent;
+
+    height: fit-content;
+
+    text-align: left;
+
+    font-size: 15px;
+    color: white;
+
+    padding-left: 25px;
+}
+
+.webtermEntry.error {
+    background-color: red;
+}
+
+.webtermEntry.command {
+    background-color: blue;
+}
